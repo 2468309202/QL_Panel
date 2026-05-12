@@ -22,23 +22,30 @@
 ## 🚀 快速部署
 
 ### 1. 克隆仓库
+
 ```bash
-git clone [https://github.com/2468309202/ql-panel.git](https://github.com/2468309202/ql-panel.git)
+git clone https://github.com/2468309202/ql-panel.git
 cd ql-panel
-2. 配置环境变量
-在项目根目录新建 .env 文件，填入你的青龙面板信息：
+```
+---
 
-代码段
-# 青龙面板后端地址（若在同一台服务器，建议填写内网IP）
-QL_URL=[http://127.0.0.1:5700](http://127.0.0.1:5700)
+### 2. 配置环境变量
 
-# 青龙面板 -> 系统设置 -> 应用设置 -> 新建应用 (必须勾选: 环境变量权限)
+在项目根目录新建 `.env` 文件，填入你的青龙面板信息：
+```env
+# 青龙面板后端地址（若在同一台服务器，建议填写内网 IP）
+QL_URL=http://127.0.0.1:5700
+
+# 青龙面板 -> 系统设置 -> 应用设置 -> 新建应用
+# （必须勾选：环境变量权限）
 CLIENT_ID=你的应用ID
 CLIENT_SECRET=你的应用密钥
-3. Docker-compose部署 一键启动
-Bash
-# 构建镜像并后台运行
+```
+### 3. Docker-compose部署 一键启动
+```bash
+# 构建镜像并后台运行，如果构建失败请换源
 docker-compose up -d --build
+```
 📂 目录结构
 ├── app.py              # Flask 后端核心逻辑（包含 API 转发与智能判断）
 ├── Dockerfile          # 镜像构建脚本（已集成国内换源）
