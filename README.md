@@ -18,35 +18,32 @@
 - **后端**: [Python 3.9](https://www.python.org/) + [Flask 3.0](https://flask.palletsprojects.com/)
 - **前端**: 原生 HTML5 + CSS3 + JavaScript (ES6)
 - **部署**: [Docker](https://www.docker.com/) + Docker Compose
-
-## 🚀 快速部署
-
-### 1. 克隆仓库
-
+### 欢迎二次开发以下是复制文件进行部署的步骤
 ```bash
 git clone https://github.com/2468309202/ql-panel.git
 cd ql-panel
+docker-compose build --no-cache
+docker-compose up -d
 ```
----
 
-### 2. 配置环境变量
+## 🚀 以下是快速部署
+
+### 1. 配置环境变量
 
 在项目根目录新建 `.env` 文件，填入你的青龙面板信息：
 ```env
 # 青龙面板后端地址（若在同一台服务器，建议填写内网 IP）
 QL_URL=http://127.0.0.1:5700
-
 # 青龙面板 -> 系统设置 -> 应用设置 -> 新建应用
 # （必须勾选：环境变量权限）
 CLIENT_ID=你的应用ID
 CLIENT_SECRET=你的应用密钥
 ```
-### 3. Docker-compose部署 一键启动
+### 2. 复制docker-compose.yml 文件部署 一键启动即可访问
 ```bash
-#复制docker-compose.yml文件 
 docker-compose up -d
 ```
-## 🚀 快速开始
+## 🚀 docker快速开始
 
 ```bash
 docker run -d \
