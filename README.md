@@ -18,7 +18,7 @@
 - **后端**: [Python 3.9](https://www.python.org/) + [Flask 3.0](https://flask.palletsprojects.com/)
 - **前端**: 原生 HTML5 + CSS3 + JavaScript (ES6)
 - **部署**: [Docker](https://www.docker.com/) + Docker Compose
-### 欢迎二次开发以下是复制文件进行部署的步骤
+### 欢迎二次开发，以下是复制文件进行部署的步骤
 ```bash
 git clone https://github.com/2468309202/ql-panel.git
 cd ql-panel
