@@ -35,7 +35,7 @@ QL_URL=[http://127.0.0.1:5700](http://127.0.0.1:5700)
 # 青龙面板 -> 系统设置 -> 应用设置 -> 新建应用 (必须勾选: 环境变量权限)
 CLIENT_ID=你的应用ID
 CLIENT_SECRET=你的应用密钥
-3. Docker 一键启动
+3. Docker-compose部署 一键启动
 Bash
 # 构建镜像并后台运行
 docker-compose up -d --build
