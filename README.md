@@ -43,9 +43,20 @@ CLIENT_SECRET=你的应用密钥
 ```
 ### 3. Docker-compose部署 一键启动
 ```bash
-# 构建镜像并后台运行，如果构建失败请换源
-docker-compose up -d --build
+#复制docker-compose.yml文件 
+docker-compose up -d
 ```
+## 🚀 快速开始
+
+```bash
+docker run -d \
+-p 8080:8080 \
+-e QL_URL=http://127.0.0.1:5700 \
+-e CLIENT_ID=你的ID \
+-e CLIENT_SECRET=你的SECRET \
+manyue667/ql-panel:v1.0
+```
+
 ```text
 📂 目录结构
 ├── app.py              # Flask 后端核心逻辑（包含 API 转发与智能判断）
