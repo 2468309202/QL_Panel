@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ql-submitter:
+    build: .
+    container_name: ql-submitter
+    ports:
+      - "3000:8080" # 左边的 8080 是服务器对外访问端口，可以改成你喜欢的
+    restart: always
+    env_file:
+      - .env

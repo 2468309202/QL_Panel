@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青龙变量提交助手</title>
+    <!-- 引入外部 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div id="toast">提示信息</div>
+
+    <div class="container">
+        <div class="header">
+            <h2>QL-Panel环境变量配置</h2>
+            <p>请输入参数完成自动化绑定</p>
+        </div>
+
+        <div class="form-group">
+            <label>变量名称</label>
+            <input type="text" id="varName" placeholder="例如: JD_COOKIE">
+        </div>
+
+        <div class="form-group">
+            <label>备注</label>
+            <input type="email" id="remarks" placeholder="用于查询和区分 (如: 您的邮箱)">
+        </div>
+
+        <div class="form-group">
+            <label>变量值 (Token/Cookie)</label>
+            <input type="text" id="value" placeholder="请粘贴抓取到的数据">
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-submit" onclick="submitEnv()">确认提交</button>
+            <button class="btn-query" onclick="queryEnv()">查询状态</button>
+        </div>
+
+        <div id="resultArea"></div>
+    </div>
+
+    <!-- 重点在这里：引入外部 JS 文件 -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
