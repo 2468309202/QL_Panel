@@ -1,10 +1,10 @@
 version: '3'
 services:
-  ql-submitter:
-    build: .
-    container_name: ql-submitter
+  ql-panel:
+    image: manyue667/ql-panel:v1.0  # 🌟 核心：使用你刚上传的镜像
+    container_name: ql-panel
     ports:
-      - "3000:8080" # 左边的 8080 是服务器对外访问端口，可以改成你喜欢的
-    restart: always
+      - "8080:8080"                  # 格式：服务器端口:容器内部端口
     env_file:
-      - .env
+      - .env                         # 🌟 引用环境变量配置文件
+    restart: always                  # 确保服务器重启后容器自动启动
