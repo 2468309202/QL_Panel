@@ -46,6 +46,7 @@ CLIENT_SECRET=你的应用密钥
 # 构建镜像并后台运行，如果构建失败请换源
 docker-compose up -d --build
 ```
+```text
 📂 目录结构
 ├── app.py              # Flask 后端核心逻辑（包含 API 转发与智能判断）
 ├── Dockerfile          # 镜像构建脚本（已集成国内换源）
@@ -58,6 +59,7 @@ docker-compose up -d --build
 │       └── main.js     # 前端交互逻辑、格式校验与本地存储
 └── templates/
     └── index.html      # Jinja2 网页模板
+```
 ⚠️ 注意事项
 端口放行：请确保服务器安全组已开放 8080 端口。若端口冲突，请修改 docker-compose.yml 中的映射端口。
 
